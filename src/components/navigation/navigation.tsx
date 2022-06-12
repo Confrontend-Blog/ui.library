@@ -17,6 +17,7 @@ const Navigation = ({ navMenuItems }: { navMenuItems: INavigation[] }) => {
           onMouseEnter={item.lazyLoadComponent}
           onFocus={item.lazyLoadComponent}
           style={({ isActive }) =>
+            // eslint-disable-next-line no-restricted-globals
             isActive || location.pathname === item.route
               ? {
                   borderBottom: " 3px solid #0384fc",
