@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { navMenuItems } from "./navigation-items";
+import { INavigation } from "./navigation.types";
 import * as S from "./navigation.styled";
 
 /**
@@ -7,17 +7,17 @@ import * as S from "./navigation.styled";
  * On Mouse Enter or Focus, the components get lazy-loaded.
  * @returns Navigation JSX Element
  */
-export default function Navigation() {
+const Navigation = ({ navMenuItems }: { navMenuItems: INavigation[] }) => {
   return (
     <S.NavigationWrapper>
       {navMenuItems.map((item) => (
         <NavLink
-          to={item.to}
+          to={item.route}
           key={item.displayName}
-          onMouseEnter={item.loadComponent}
-          onFocus={item.loadComponent}
+          onMouseEnter={item.lazyLoadComponent}
+          onFocus={item.lazyLoadComponent}
           style={({ isActive }) =>
-            isActive || (location.pathname === "/" && item.to === "/tax")
+            isActive || location.pathname === item.route
               ? {
                   borderBottom: " 3px solid #0384fc",
                   marginBottom: "-3px",
@@ -30,4 +30,6 @@ export default function Navigation() {
       ))}
     </S.NavigationWrapper>
   );
-}
+};
+
+export default Navigation;
