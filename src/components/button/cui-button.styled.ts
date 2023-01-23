@@ -7,7 +7,7 @@ type ButtonWrapperProps = {
   hoverBgColor: string | undefined;
 };
 
-export const ButtonWrapper = styled.span<ButtonWrapperProps>`
+export const ButtonWrapper = styled.button<ButtonWrapperProps>`
   box-shadow: inset 0px 1px 0px 0px #ffffff;
   background-color: #222;
   border: 1px solid;
@@ -20,8 +20,15 @@ export const ButtonWrapper = styled.span<ButtonWrapperProps>`
   padding: 6px 24px;
   text-decoration: none;
   &:hover {
-    background-color: #0061fe13;
+    background-color: #eee;
     color: #000;
+  }
+
+  &:disabled {
+    color: rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.12);
+    pointer-events: none;
   }
 
   ${({ color, bgColor, hoverBgColor, hoverColor }) => css`

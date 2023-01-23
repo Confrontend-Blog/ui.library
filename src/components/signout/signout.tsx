@@ -1,5 +1,5 @@
 import { FormEvent } from "react";
-import UiButton from "../button/ui-button";
+import CuiButton from "../button/cui-button";
 
 export default function SignOut({
   signOutFn,
@@ -7,14 +7,15 @@ export default function SignOut({
   signOutFn: (e: FormEvent<HTMLButtonElement>) => void;
 }) {
   return (
-    <UiButton
+    <CuiButton
       onClick={signOutFn}
       hoverColor="#000"
       hoverBgColor="#ccc"
       color="#000"
       bgColor="#fff"
+      disabled={false}
     >
       Sign Out
-    </UiButton>
+    </CuiButton>
   );
 }

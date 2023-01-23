@@ -1,25 +1,30 @@
+import { type } from "os";
 import { ReactNode, MouseEvent } from "react";
-import * as S from "./ui-button.styled";
+import * as S from "./cui-button.styled";
 
-type UiButtonProps = {
+type CuiButtonProps = {
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
   children: ReactNode;
   color?: string;
   bgColor?: string;
   hoverColor?: string;
   hoverBgColor?: string;
+  disabled?: boolean;
+  type?: "button" | "submit" | "reset" | undefined;
 };
 /**
  * UI Button
  */
-export default function UiButton({
+export const CuiButton = ({
   children,
   onClick,
   color,
   bgColor,
   hoverColor,
-  hoverBgColor
-}: UiButtonProps) {
+  hoverBgColor,
+  disabled,
+  type = undefined,
+}: CuiButtonProps) => {
   return (
     <S.ButtonWrapper
       onClick={onClick}
@@ -27,8 +32,10 @@ export default function UiButton({
       bgColor={bgColor}
       hoverColor={hoverColor}
       hoverBgColor={hoverBgColor}
+      disabled={disabled}
+      type={type}
     >
       {children}
     </S.ButtonWrapper>
   );
-}
+};
