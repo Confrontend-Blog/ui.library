@@ -1,11 +1,11 @@
 import { FormEvent } from "react";
-import CuiButton from "../button/cui-button";
+import { CuiButton } from "../button/cui-button";
 
-export default function SignOut({
+export const SignOut = ({
   signOutFn,
 }: {
   signOutFn: (e: FormEvent<HTMLButtonElement>) => void;
-}) {
+}) => {
   return (
     <CuiButton
       onClick={signOutFn}
@@ -18,4 +18,4 @@ export default function SignOut({
       Sign Out
     </CuiButton>
   );
-}
+};

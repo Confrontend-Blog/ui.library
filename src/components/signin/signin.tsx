@@ -1,11 +1,11 @@
 import { FormEvent } from "react";
 import * as S from "./signin.styled";
 
-export default function SignIn({
+export const SignIn = ({
   signInFn,
 }: {
   signInFn: (e: FormEvent<HTMLFormElement>) => void;
-}): JSX.Element {
+}): JSX.Element => {
   return (
     <S.LoginWrapper>
       <S.LoginBoxWrapper>
@@ -32,12 +32,10 @@ export default function SignIn({
             <S.LoginSubmitInput value="Sign in" type="submit" />
           </S.LoginFrom>
           <S.LoginParagraph>
-            <small>
-              Please contact the developer for a test account.
-            </small>
+            <small>Please contact the developer for a test account.</small>
           </S.LoginParagraph>
         </S.LoginBox>
       </S.LoginBoxWrapper>
     </S.LoginWrapper>
   );
-}
+};

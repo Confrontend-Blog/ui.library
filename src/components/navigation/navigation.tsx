@@ -13,7 +13,7 @@ type NavigationProps = {
  * On Mouse Enter or Focus, the components get lazy-loaded.
  * @returns Navigation JSX Element
  */
-const Navigation = ({ navMenuItems, rightSideItems }: NavigationProps) => {
+export const Navigation = ({ navMenuItems, rightSideItems }: NavigationProps) => {
   
   return (
     <S.NavigationWrapper>
