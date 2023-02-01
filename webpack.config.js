@@ -1,42 +1,15 @@
+const BaseWebpackConfig = require("./webpack.base.config.js");
+
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
-  mode: "development",
-  entry: "./src/index.tsx",
-  devtool: "inline-source-map",
+  ...BaseWebpackConfig,
+  mode: "production",
+  entry: "./src/index.ts",
   output: {
     path: path.join(__dirname, "/dist"),
     filename: "bundle.js",
+    libraryTarget: "umd",
   },
-  devtool: "inline-source-map",
-  devServer: {
-    static: "./dist",
-  },
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: "babel-loader",
-      },
-      {
-        test: /\.tsx?$/,
-        use: "ts-loader",
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.(css|scss)$/,
-        exclude: /node_modules/,
-        use: ["url-loader", "style-loader", "css-loader"],
-      },
-    ],
-  },
-  resolve: {
-    extensions: [".tsx", ".ts", ".js"],
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-    }),
-  ],
+  externals: ["@emotion/react", "@emotion/styled", /react.*/, /@mui\/.*/],
 };
