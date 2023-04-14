@@ -37,8 +37,10 @@ export const CuiContactForm = ({
 
   const getTooltipText = (errors: FieldErrorsImpl<FormState>): ReactNode => {
     console.log(Object.keys(errors));
-    
-    return Object.keys(errors).length ? "Please fix the form errors first" : undefined;
+
+    return Object.keys(errors).length
+      ? "Please fix the form errors first"
+      : undefined;
   };
 
   return (

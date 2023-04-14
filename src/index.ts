@@ -1,15 +1,6 @@
-import { CuiButton } from "./components/button/cui-button";
-import { CuiContactForm } from "./components/contact-form/CuiContactForm";
-import { Navigation } from "./components/navigation/navigation";
-import { NonIdealState } from "./components/non-ideal-state/non-ideal-state";
-import { SignIn } from "./components/signin/signin";
-import { SignOut } from "./components/signout/signout";
+import * as all from "./bootstrap";
+export { all };
 
-export {
-  CuiButton,
-  CuiContactForm,
-  Navigation,
-  NonIdealState,
-  SignIn,
-  SignOut,
-};
+
+// https://blog.devgenius.io/module-federation-advanced-api-inwebpack-5-0-0-beta-17-71cd4d42e534
+// https://stackoverflow.com/questions/66123283/webpack-module-federation-is-not-working-with-eager-shared-libs

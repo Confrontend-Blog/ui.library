@@ -1,4 +1,3 @@
-import { type } from "os";
 import { ReactNode, MouseEvent } from "react";
 import * as S from "./cui-button.styled";
 
@@ -15,7 +14,7 @@ type CuiButtonProps = {
 /**
  * UI Button
  */
-export const CuiButton = ({
+const CuiButton = ({
   children,
   onClick,
   color,
@@ -39,3 +38,5 @@ export const CuiButton = ({
     </S.ButtonWrapper>
   );
 };
+
+export { CuiButton };

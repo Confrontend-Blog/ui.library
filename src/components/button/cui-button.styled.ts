@@ -9,7 +9,6 @@ type ButtonWrapperProps = {
 
 export const ButtonWrapper = styled.button<ButtonWrapperProps>`
   box-shadow: inset 0px 1px 0px 0px #ffffff;
-  background-color: #222;
   border: 1px solid;
   border-radius: 0.75em;
   display: inline-block;
@@ -25,9 +24,10 @@ export const ButtonWrapper = styled.button<ButtonWrapperProps>`
   }
 
   &:disabled {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(151, 151, 151, 1);
+    cursor: not-allowed;
     box-shadow: none;
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: #222;
     pointer-events: none;
   }
 

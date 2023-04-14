@@ -5,14 +5,22 @@ type NavigationWrapperProps = {
 };
 
 export const NavigationWrapper = styled.span<NavigationWrapperProps>`
+  backdrop-filter: blur(10px);
+  background-color: rgba(32, 33, 37, 0.5);
   display: flex;
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
   flex-direction: row;
   align-items: center;
   column-gap: 1em;
   padding-left: 3em;
-  height: 2.5em;
+  height: 3.5em;
   box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
   box-sizing: border-box;
+  box-shadow: 0 1px 3px 1px #0384fc;
   a {
     height: 100%;
     display: flex;
@@ -38,8 +46,12 @@ export const ItemRightWrapper = styled.span`
     justify-content: center;
     width: fit-content;
     &:not(.active):hover {
-      box-shadow: 0 0 0 0 ;
+      box-shadow: 0 0 0 0;
       cursor: pointer;
     }
   }
+`;
+
+export const Logo = styled.span`
+  font-family: Futura;
 `;
