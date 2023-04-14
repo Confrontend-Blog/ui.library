@@ -8,10 +8,9 @@ module.exports = {
   mode: "production",
   entry: "./src/index.ts",
   output: {
-    // path: path.join(__dirname, "/dist"),
-    // filename: "bundle.js",
-    // libraryTarget: "umd",
-    publicPath: "http://localhost:5001/",
+    path: path.join(__dirname, "/dist"),
+    filename: "bundle.js",
+    libraryTarget: "umd",
   },
   externals: ["@emotion/react", "@emotion/styled", /react.*/, /@mui\/.*/],
   // HtmlWebpackPlugin is used to inject scripts and styles inside index.html

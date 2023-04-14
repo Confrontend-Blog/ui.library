@@ -1,5 +1,4 @@
 import { ThemeProvider } from "@mui/material";
-import React from "react";
 import "./App.css";
 import { CuiContactForm } from "./components/contact-form/CuiContactForm";
 import { theme } from "./theme/theme";
@@ -12,12 +11,12 @@ function App() {
         <CuiContactForm
           userName={{
             label: "Name",
-            name: "aaa",
+            name: "fff",
             defaultValue: "",
           }}
           email={{
             label: "Email",
-            name: "bbb",
+            name: "sss",
             defaultValue: "",
           }}
           message={{

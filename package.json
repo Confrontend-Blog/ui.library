@@ -2,7 +2,7 @@
   "name": "confrontend_ui_library",
   "version": "1.7.0",
   "private": true,
-  "main": "main/bundle.js",
+  "main": "src/index.tsx",
   "scripts": {
     "start": "webpack serve --config webpack.dev.config.js  --hot",
     "build": "webpack --config webpack.dev.config.js"
