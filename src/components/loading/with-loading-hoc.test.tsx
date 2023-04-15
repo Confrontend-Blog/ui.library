@@ -1,10 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import withLoading from "./with-loading-hoc";
 
-// Sample component to test with the HOC
 const TestComponent = ({ text }: { text: string }) => <div>{text}</div>;
-
-// Apply the HOC to the TestComponent
 const TestComponentWithLoading = withLoading(TestComponent);
 
 describe("withLoading HOC", () => {

@@ -2,15 +2,15 @@ import { FormEvent } from "react";
 import * as S from "./signin.styled";
 
 export const SignIn = ({
-  signInFn,
+  onSubmitCb,
 }: {
-  signInFn: (e: FormEvent<HTMLFormElement>) => void;
+  onSubmitCb: (e: FormEvent<HTMLFormElement>) => void;
 }): JSX.Element => {
   return (
     <S.LoginWrapper>
       <S.LoginBoxWrapper>
         <S.LoginBox>
-          <S.LoginFrom onSubmit={signInFn}>
+          <S.LoginFrom onSubmit={onSubmitCb}>
             <S.LoginInputWrapper>
               <label htmlFor="username">Username</label>
               <input
