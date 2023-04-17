@@ -7,6 +7,7 @@ import { FormEvent, useState } from "react";
 import FilteredList from "./components/list/filtered-list";
 import BarChart from "./components/charts/bar-chart";
 import { barChartData, listItems, options } from "../data/fake-data";
+import ScrollProgressBar from "./components/scroll-progress-bar/scroll-progress-bar";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
+        <ScrollProgressBar color={"red"} />
         <button onClick={() => setCount(count + 1)}>
           Increment count to simulate parent re-render
         </button>
