@@ -5,6 +5,7 @@ import isEmail from "validator/lib/isEmail";
 import { CuiButton } from "../button/cui-button";
 import { CuiTooltip } from "../tooltip/cui-tooltip";
 import { ReactNode } from "react";
+import React from "react";
 
 interface FormState {
   email: string;

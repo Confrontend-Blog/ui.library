@@ -1,5 +1,6 @@
 import { ReactNode, MouseEvent, ButtonHTMLAttributes } from "react";
 import * as S from "./cui-button.styled";
+import React from "react";
 
 type CuiButtonProps = {
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;

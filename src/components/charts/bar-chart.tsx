@@ -2,6 +2,7 @@ import { memo, useEffect, useRef } from "react";
 import { Bar } from "react-chartjs-2";
 
 import { Chart, LinearScale, CategoryScale, BarElement } from "chart.js";
+import React from "react";
 
 // Register the linear scale and category scale
 Chart.register(LinearScale, CategoryScale, BarElement);

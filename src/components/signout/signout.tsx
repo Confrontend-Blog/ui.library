@@ -1,5 +1,6 @@
 import { FormEvent } from "react";
 import { CuiButton } from "../button/cui-button";
+import React from "react";
 
 export const SignOut = ({
   signOutFn,

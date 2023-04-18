@@ -1,5 +1,6 @@
 import { render, fireEvent } from "@testing-library/react";
 import ScrollProgressBar from "./scroll-progress-bar";
+import React from "react";
 
 // Mock window properties
 const innerHeight = 800;

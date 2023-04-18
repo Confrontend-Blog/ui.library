@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import * as S from "./layout.styled";
 
 import { Footer } from "../footer/footer";
+import React from "react";
 
 interface LayoutProps {
   children: ReactNode;
