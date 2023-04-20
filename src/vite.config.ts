@@ -1,11 +1,12 @@
 import * as path from "path";
-
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+
 import { visualizer } from "rollup-plugin-visualizer";
 import { Plugin, UserConfig } from "vite";
 import svgr from "vite-plugin-svgr";
 
-const config: UserConfig = {
+export default defineConfig({
   build: {
     minify: false,
     emptyOutDir: false,
@@ -29,6 +30,11 @@ const config: UserConfig = {
       },
     },
   },
+  server: {
+    port: 3000,
+    strictPort: true,
+  },
+  publicDir: '../public',
   plugins: [
     react(),
     svgr(),
@@ -38,6 +44,4 @@ const config: UserConfig = {
       open: false,
     }) as Plugin,
   ],
-};
-
-export default config;
+});

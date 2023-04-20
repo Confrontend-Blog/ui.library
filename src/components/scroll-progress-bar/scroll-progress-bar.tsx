@@ -9,15 +9,18 @@ function ScrollProgressBar({ color = "red" }: ScrollProgressBarProps) {
   const progressBarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!progressBarRef.current) {
-      return;
+    // Saving progressCurrent in a const assures the ref won't change later
+    const progressCurrent = progressBarRef.current;
+
+    if (!progressCurrent) {
+      return undefined;
     }
     const handleScroll = () => {
       const scrollTop = document.documentElement.scrollTop;
       const windowHeight = window.innerHeight;
       const docHeight = document.documentElement.scrollHeight - windowHeight;
       const scrollPercentage = (scrollTop / docHeight) * 100;
-      progressBarRef.current!.style.width = `${scrollPercentage}%`;
+      progressCurrent.style.width = `${scrollPercentage}%`;
     };
 
     window.addEventListener("scroll", handleScroll);

@@ -6,7 +6,7 @@
   "module": "./lib/index.es.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "start": "webpack serve --config webpack.dev.config.js  --hot",
+    "start": "vite src/",
     "build": "rm -rf lib/* && concurrently \"yarn:build:*\"",
     "build:types": "tsc --emitDeclarationOnly",
     "build:lib": "vite --config ./vite.config.ts build src/"
