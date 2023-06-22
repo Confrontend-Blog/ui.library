@@ -1,8 +1,8 @@
-import { ReactNode, MouseEvent, ButtonHTMLAttributes } from "react";
-import * as S from "./cui-button.styled";
-import React from "react";
+import { MouseEvent, ReactNode } from "react";
 
-type CuiButtonProps = {
+import * as S from "./cui-button.styled";
+
+export type CuiButtonProps = {
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
   children: ReactNode;
   color?: string;
@@ -10,8 +10,8 @@ type CuiButtonProps = {
   hoverColor?: string;
   hoverBgColor?: string;
   disabled?: boolean;
-  type?: "button" | "submit" | "reset";
-} & ButtonHTMLAttributes<HTMLButtonElement>;
+  type?: "button" | "submit" | "reset" | undefined;
+};
 /**
  * UI Button
  */
@@ -24,7 +24,6 @@ const CuiButton = ({
   hoverBgColor,
   disabled,
   type = undefined,
-  ...otherProps
 }: CuiButtonProps) => {
   return (
     <S.ButtonWrapper
@@ -35,11 +34,10 @@ const CuiButton = ({
       hoverBgColor={hoverBgColor}
       disabled={disabled}
       type={type}
-      {...otherProps}
     >
       {children}
     </S.ButtonWrapper>
   );
 };
 
-export { CuiButton };
+export default CuiButton;
