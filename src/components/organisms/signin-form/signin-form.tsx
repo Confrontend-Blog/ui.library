@@ -1,8 +1,8 @@
 import { FormEvent } from "react";
-import * as S from "./signin.styled";
+import * as S from "./signin-form.styled";
 import React from "react";
 
-export const SignIn = ({
+export const SignInForm = ({
   onSubmitCb,
 }: {
   onSubmitCb: (e: FormEvent<HTMLFormElement>) => void;

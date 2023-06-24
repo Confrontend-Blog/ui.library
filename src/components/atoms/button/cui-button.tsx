@@ -40,4 +40,4 @@ const CuiButton = ({
   );
 };
 
-export default CuiButton;
+export { CuiButton };

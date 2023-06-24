@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 import { RoutePaths } from "../../../root-component";
 import * as S from "./menu-items.styled";
+import React from "react";
 
 const MenuItems = () => {
   const location = useLocation();

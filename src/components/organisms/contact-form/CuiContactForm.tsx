@@ -2,8 +2,8 @@ import { FieldErrorsImpl, FormProvider, useForm } from "react-hook-form";
 import { FormControl, InputLabel, MenuItem, TextField } from "@mui/material";
 import { CuiInput } from "./CuiInput";
 import isEmail from "validator/lib/isEmail";
-import { CuiButton } from "../button/cui-button";
-import { CuiTooltip } from "../tooltip/cui-tooltip";
+import { CuiButton } from "../../atoms/button/cui-button";
+import { CuiTooltip } from "../../atoms/tooltip/cui-tooltip";
 import { ReactNode } from "react";
 import React from "react";
 

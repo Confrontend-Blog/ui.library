@@ -10,7 +10,7 @@ import {
   Path,
   useFormContext,
 } from "react-hook-form";
-import { ErrorBoundary } from "../ErrorBoundary/ErrorBoundary";
+import { ErrorBoundary } from "../../ErrorBoundary/ErrorBoundary";
 import React from "react";
 
 interface CuiInputProps<
