@@ -17,6 +17,12 @@ declare module "@mui/material/styles" {
   }
 }
 
+const shadows = {
+  elevationLow: "0 2px 8px 0 rgba(0, 0, 0, 0.08)",
+  elevationMid: "0 4px 20px 0 rgba(0, 0, 0, 0.12)",
+  elevationHigh: "0 16px 32px 0 rgba(0, 0, 0, 0.12)",
+};
+
 const appTheme: ThemeOptions = {
   palette: {
     action: {
@@ -84,8 +90,33 @@ const appTheme: ThemeOptions = {
       fontWeight: customTypography.weights.light,
     },
   },
+  shadows: [
+    "none",
+    shadows.elevationLow,
+    shadows.elevationMid,
+    shadows.elevationHigh,
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+  ],
 };
 
-export const theme = createTheme(appTheme);
-
-export type CustomizedMuiThemeType = typeof appTheme;
+export const lightTheme = createTheme(appTheme);

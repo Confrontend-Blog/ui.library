@@ -1,9 +1,9 @@
-import { ThemeProvider } from "@mui/material";
+
 import "./App.css";
 import { CuiContactForm } from "./components/organisms/contact-form/CuiContactForm";
-import { theme } from "./theme/theme";
+import { lightTheme } from "./theme/theme";
 import { FormEvent, useState } from "react";
-import FilteredList from "./components/molecules/list/filtered-list";
+import FilteredList from "./components/molecules/filtered-list/filtered-list";
 import BarChart from "./components/organisms/charts/bar-chart";
 import { barChartData, listItems, options } from "../data/fake-data";
 import ScrollProgressBar from "./components/atoms/scroll-progress-bar/scroll-progress-bar";
@@ -11,12 +11,13 @@ import React from "react";
 import { CuiButton } from "./components/atoms/button/cui-button";
 import { SignInForm } from "./components/organisms/signin-form/signin-form";
 import { Typography } from "@mui/material";
+import { ThemeProvider } from "styled-components";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={lightTheme}>
       <div className="App">
         <div>
           <Typography variant="h1">This is an h1 heading</Typography>
