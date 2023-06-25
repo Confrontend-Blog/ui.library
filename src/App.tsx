@@ -18,8 +18,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-
-      <div>
+        <div>
           <Typography variant="h1">This is an h1 heading</Typography>
           <Typography variant="h2">This is an h2 heading</Typography>
           <Typography variant="h3">This is an h3 heading</Typography>
@@ -68,7 +67,7 @@ function App() {
             name: "ccc",
             defaultValue: "",
           }}
-        /> */}
+        />
       </div>
     </ThemeProvider>
   );

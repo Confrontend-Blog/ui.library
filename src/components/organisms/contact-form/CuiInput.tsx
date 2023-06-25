@@ -10,7 +10,6 @@ import {
   Path,
   useFormContext,
 } from "react-hook-form";
-import { ErrorBoundary } from "../../ErrorBoundary/ErrorBoundary";
 import React from "react";
 
 interface CuiInputProps<
@@ -41,27 +40,25 @@ export const CuiInput = <
   const formContext = useFormContext<TFieldValues>();
 
   return (
-    <ErrorBoundary>
-      <Controller
-        control={formContext?.control}
-        name={name as Path<TFieldValues>}
-        render={({ field: { onBlur, ref, ...field }, fieldState }) => (
-          <TextField
-            onBlur={onBlur}
-            variant="outlined"
-            label={label}
-            sx={{
-              marginBlockEnd: "1em",
-            }}
-            onChange={(e) => field.onChange(e)}
-            error={!!fieldState.error}
-            helperText={fieldState.error?.message}
-            value={field.value}
-          />
-        )}
-        rules={rules}
-        defaultValue={defaultValue}
-      />
-    </ErrorBoundary>
+    <Controller
+      control={formContext?.control}
+      name={name as Path<TFieldValues>}
+      render={({ field: { onBlur, ref, ...field }, fieldState }) => (
+        <TextField
+          onBlur={onBlur}
+          variant="outlined"
+          label={label}
+          sx={{
+            marginBlockEnd: "1em",
+          }}
+          onChange={(e) => field.onChange(e)}
+          error={!!fieldState.error}
+          helperText={fieldState.error?.message}
+          value={field.value}
+        />
+      )}
+      rules={rules}
+      defaultValue={defaultValue}
+    />
   );
 };
