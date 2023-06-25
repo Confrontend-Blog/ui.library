@@ -1,89 +1,90 @@
 import { createTheme, Theme, ThemeOptions } from "@mui/material/styles";
+import { colors } from "./shades";
+import { customTypography } from "./typography";
 
-const colors = {
-  blueMedium: "#2196f3",
-  greenMedium: "#4caf50",
-  greyDark: "#202124",
-  greyLight: "#ccc",
-  greyMedium: "#666",
-  greyVeryLight: "#F2F2F2",
-  orangeLight: "#ffb74d",
-  redMedium: "#d32f2f",
-  white: "#fff",
-};
+declare module "@mui/material/styles" {
+  interface PaletteActionOptions {
+    active: string;
+    disabled: string;
+    focus: string;
+    hover: string;
+    selected: string;
+  }
 
-const appTheme = {
+  interface TypographyStyleOptions {
+    fontSize: string;
+    lineHeight: number;
+  }
+}
+
+const appTheme: ThemeOptions = {
   palette: {
     action: {
-      active: colors.greyDark,
-      disabled: colors.greyMedium,
-
-      focus: colors.greyDark,
-
-      hover: colors.blueMedium,
-
-      selected: colors.greyDark,
+      active: colors.grey[900],
+      disabled: colors.grey[600],
+      focus: colors.grey[900],
+      hover: colors.blue[500],
+      selected: colors.grey[900],
     },
     background: {
-      default: colors.greyDark,
+      default: colors.grey[900],
       paper: colors.white,
     },
-    divider: colors.greyMedium,
-    error: { main: colors.redMedium },
-    info: { main: colors.blueMedium },
-    primary: { main: colors.greyLight },
-    secondary: { dark: colors.greyLight, main: colors.greyDark },
-    success: { main: colors.greenMedium },
+    divider: colors.grey[600],
+    error: { main: colors.red[500] },
+    info: { main: colors.blue[500] },
+    primary: { main: colors.grey[200] },
+    secondary: { dark: colors.grey[200], main: colors.grey[900] },
+    success: { main: colors.green[500] },
     text: {
-      disabled: colors.greyMedium,
-      primary: colors.greyDark,
-      secondary: colors.greyLight,
+      disabled: colors.grey[600],
+      primary: colors.grey[900],
+      secondary: colors.grey[200],
     },
-    warning: { main: colors.orangeLight },
+    warning: { main: colors.orange[300] },
   },
   typography: {
     // body1 is typically used for longer text elements, such as paragraphs or articles,
     body1: {
-      fontSize: "1rem",
-      lineHeight: 1.75,
+      fontSize: customTypography.sizes.body1,
+      lineHeight: customTypography.lineHeights.large,
     },
     // body2 is used for shorter text elements, such as captions or subheaders.
     body2: {
-      fontSize: "0.875rem",
-      lineHeight: 1.43,
+      fontSize: customTypography.sizes.body2,
+      lineHeight: customTypography.lineHeights.medium,
     },
     button: {
-      fontSize: "1rem",
-      fontWeight: 500,
-      lineHeight: 1.5,
-      textTransform: "capitalize",
+      fontSize: customTypography.sizes.button,
+      fontWeight: customTypography.weights.medium,
+      lineHeight: customTypography.lineHeights.medium,
     },
     caption: {
-      fontSize: "0.75rem",
-      lineHeight: 1.66,
+      fontSize: customTypography.sizes.caption,
+      lineHeight: customTypography.lineHeights.medium,
     },
     fontFamily: "Roboto, sans-serif",
     h1: {
-      fontSize: "1.5rem",
-      fontWeight: 500,
-      lineHeight: 1.2,
+      fontSize: customTypography.sizes.h1,
+      fontWeight: customTypography.weights.medium,
+      lineHeight: customTypography.lineHeights.small,
     },
     h2: {
-      fontSize: "1.2rem",
-      fontWeight: 500,
-      lineHeight: 1.2,
+      fontSize: customTypography.sizes.h2,
+      fontWeight: customTypography.weights.medium,
+      lineHeight: customTypography.lineHeights.small,
     },
     h3: {
-      fontSize: "1rem",
-      fontWeight: 500,
-      lineHeight: 1.2,
+      fontSize: customTypography.sizes.h3,
+      fontWeight: customTypography.weights.medium,
+      lineHeight: customTypography.lineHeights.small,
     },
     subtitle1: {
-      fontSize: "0.8rem",
-      fontWeight: 250,
-    }
+      fontSize: customTypography.sizes.subtitle1,
+      fontWeight: customTypography.weights.light,
+    },
   },
-} as const;
+};
 
 export const theme = createTheme(appTheme);
 
