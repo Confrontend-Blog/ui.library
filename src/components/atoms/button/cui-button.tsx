@@ -1,4 +1,4 @@
-import { MouseEvent, ReactNode } from "react";
+import React, { MouseEvent, ReactNode } from "react";
 
 import * as S from "./cui-button.styled";
 
@@ -28,7 +28,7 @@ const CuiButton = ({
   return (
     <S.ButtonWrapper
       onClick={onClick}
-      color={color}
+      textColor={color}
       bgColor={bgColor}
       hoverColor={hoverColor}
       hoverBgColor={hoverBgColor}

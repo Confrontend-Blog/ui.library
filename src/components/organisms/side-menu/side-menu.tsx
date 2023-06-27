@@ -1,6 +1,8 @@
+import React from "react";
 import { ButtonBase, ListItem, ListItemIcon } from "@mui/material";
 import { Link } from "react-router-dom";
 
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import { RoutePaths } from "../../../root-component";
 import { useLogout } from "../logout/logout";
 import MenuItems from "./menu-items";
@@ -22,7 +24,7 @@ function SideMenu() {
           <ButtonBase onClick={logout}>
             <ListItem>
               <ListItemIcon>
-                <S.LogoutIcon />
+                <ExitToAppIcon />
               </ListItemIcon>
               <S.StyledListItemText primary="Logout" />
             </ListItem>

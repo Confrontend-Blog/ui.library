@@ -1,42 +1,39 @@
-import styled, { css } from "styled-components";
+import { Theme } from '@mui/material/styles';
+import { styled } from "@mui/system";
 
-type ButtonWrapperProps = {
-  color: string | undefined;
-  bgColor: string | undefined;
-  hoverColor: string | undefined;
-  hoverBgColor: string | undefined;
-};
+import { Button, ButtonProps } from "@mui/material";
 
-export const ButtonWrapper = styled.button<ButtonWrapperProps>`
-  ${({ theme, color, bgColor, hoverBgColor, hoverColor }) => css`
-    box-shadow: ${theme.shadows[1]};
-    border: 1px solid;
-    border-radius: 0.75em;
-    display: inline-block;
-    cursor: pointer;
-    color: #fff;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 6px 24px;
-    text-decoration: none;
-    &:hover {
-      background-color: #eee;
-      color: #000;
-    }
+type CustomButtonProps = {
+  textColor?: string;
+  bgColor?: string;
+  hoverBgColor?: string;
+  hoverColor?: string;
+  theme?: Theme // TODO find a way to make this implicit
+} & ButtonProps;
 
-    &:disabled {
-      color: rgba(151, 151, 151, 1);
-      cursor: not-allowed;
-      box-shadow: none;
-      background-color: #222;
-      pointer-events: none;
-    }
-
-    color: ${color};
-    background-color: ${bgColor};
-    &:hover {
-      background-color: ${hoverBgColor};
-      color: ${hoverColor};
-    }
-  `}
-`;
+export const ButtonWrapper = styled(Button)<CustomButtonProps>(
+  ({ theme, textColor, bgColor, hoverBgColor, hoverColor }) => ({
+    boxShadow: theme.shadows[1],
+    border: '1px solid',
+    borderRadius: '0.75em',
+    display: 'inline-block',
+    cursor: 'pointer',
+    color: textColor || '#000',
+    backgroundColor: bgColor,
+    fontSize: '15px',
+    fontWeight: 'bold',
+    padding: '6px 24px',
+    textDecoration: 'none',
+    '&:hover': {
+      backgroundColor: hoverBgColor || '#eee',
+      color: hoverColor || '#000',
+    },
+    '&:disabled': {
+      color: 'rgba(151, 151, 151, 1)',
+      cursor: 'not-allowed',
+      boxShadow: 'none',
+      backgroundColor: '#222',
+      pointerEvents: 'none',
+    },
+  })
+);

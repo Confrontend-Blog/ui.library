@@ -1,39 +1,45 @@
-import styled from "styled-components";
+import { styled, Theme } from '@mui/material/styles';
 
-export const TableWrapper = styled.table`
-  background-color: #fff;
-  border-collapse: collapse;
-  width: 100%;
-`;
+export const TableWrapper = styled('table')({
+  backgroundColor: '#fff',
+  borderCollapse: 'collapse',
+  width: '100%',
+});
 
-export const TableHeader = styled.th<{ width?: string | number }>`
-  text-align: left;
+type TableHeaderProps = {
+  width?: string | number;
+  theme: Theme;
+};
 
-  &:first-child {
-    text-align: center;
-  }
-  background-color: ${({ theme }) => theme.palette.info.main};
-  color: #fff;
-  height: 4em;
-  width: ${({ width }) => width || "auto"}
-`;
-export const TableCell = styled.td`
-  text-align: left;
+export const TableHeader = styled('th')<TableHeaderProps>(({ theme, width }) => ({
+  textAlign: 'left',
+  '&:first-child': {
+    textAlign: 'center',
+  },
+  backgroundColor: theme.palette.info.main,
+  color: '#fff',
+  height: '4em',
+  width: width || 'auto',
+}));
 
-  &:first-child {
-    text-align: center;
-  }
-`;
+export const TableCell = styled('td')({
+  textAlign: 'left',
+  '&:first-child': {
+    textAlign: 'center',
+  },
+});
 
-export const TableRow = styled.tr`
-  height: 4em;
+type TableRowProps = {
+  theme: Theme;
+};
 
-  &:nth-of-type(odd) {
-    background-color: ${({ theme }) => theme.palette.primary.main};
-  }
-
-  :hover {
-    color: ${({ theme }) => theme.palette.info.main};
-    cursor: pointer;
-  }
-`;
+export const TableRow = styled('tr')<TableRowProps>(({ theme }) => ({
+  height: '4em',
+  '&:nth-of-type(odd)': {
+    backgroundColor: theme.palette.primary.main,
+  },
+  '&:hover': {
+    color: theme.palette.info.main,
+    cursor: 'pointer',
+  },
+}));

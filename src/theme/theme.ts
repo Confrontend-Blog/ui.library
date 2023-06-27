@@ -119,4 +119,4 @@ const appTheme: ThemeOptions = {
   ],
 };
 
-export const lightTheme = createTheme(appTheme);
+export const lightTheme: Theme = createTheme(appTheme);

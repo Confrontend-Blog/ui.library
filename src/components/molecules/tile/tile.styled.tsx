@@ -1,7 +1,6 @@
-import { Card } from '@mui/material';
-import styled from 'styled-components';
+import { Card, CardProps } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
-// Map of dimensions to height multipliers
 const dimensions = {
   '1x1': 1,
   '1x2': 2,
@@ -11,9 +10,11 @@ const dimensions = {
 type StyledCardProps = {
   width: string;
   dimension: "1x1" | "1x2" | "2x1";
-};
+} & CardProps;
 
-export const StyledCard = styled(Card)<StyledCardProps>`
-  width: ${(props) => props.width};
-  height: calc(${(props) => props.width} * ${(props) => dimensions[props.dimension]});
-`;
+const StyledCard = styled(Card)<StyledCardProps>(({width, dimension}) => ({
+  width: width,
+  height: `calc(${width} * ${dimensions[dimension]})`,
+}));
+
+export default StyledCard;

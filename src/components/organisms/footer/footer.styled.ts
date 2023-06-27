@@ -1,16 +1,19 @@
-import styled from "styled-components";
+import { styled } from "@mui/system";
+import { Theme } from "@mui/material/styles";
 
-export const FooterWrapper = styled.footer`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 15rem;
-  font-size: ${({ theme }) => theme.typography.caption.fontSize};
-  border-top: 1px solid ${({ theme }) => theme.palette.divider}; ;
-`;
+export const FooterWrapper = styled("footer")(
+  ({ theme }: { theme: Theme }) => ({
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "15rem",
+    fontSize: theme.typography.caption.fontSize,
+    borderTop: `1px solid ${theme.palette.divider}`,
+  })
+);
 
-export const FooterNav = styled.nav`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+export const FooterNav = styled("nav")({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+});

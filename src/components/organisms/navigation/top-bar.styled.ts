@@ -1,32 +1,35 @@
-import { Link } from "@mui/material";
-import styled from "styled-components";
+import { Link, Theme } from "@mui/material";
+import { styled } from "@mui/material/styles";
 
 type NavigationWrapperProps = {
   linkStyle?: string;
+  theme: Theme;
 };
 
-export const NavigationWrapper = styled.span<NavigationWrapperProps>`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0 4em;
-  height: ${({ theme }) => theme.spacing(10)};
-  a {
-    text-decoration: none;
-    color: unset;
-  }
-`;
+export const NavigationWrapper = styled("span")<NavigationWrapperProps>(
+  ({ theme, linkStyle }) => ({
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: `0 ${theme.spacing(4)}px`,
+    height: theme.spacing(10),
+    a: {
+      textDecoration: "none",
+      color: "unset",
+    },
+  })
+);
 
-export const ItemRightWrapper = styled.span`
-  display: grid;
-  grid-template-columns: 2em 2em 10em;
-  align-items: center;
-  justify-items: right;
-  margin-left: auto;
-  gap: 1em;
-  color: ${({ theme }) => theme.palette.background.default};
-`;
+export const ItemRightWrapper = styled("span")(({ theme }) => ({
+  display: "grid",
+  gridTemplateColumns: "2em 2em 10em",
+  alignItems: "center",
+  justifyContent: "right",
+  marginLeft: "auto",
+  gap: "1em",
+  color: theme.palette.background.default,
+}));
 
 export const StyledLink = styled(Link)(({ theme }) => ({
   "&:link": {
