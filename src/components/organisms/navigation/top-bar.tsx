@@ -1,20 +1,23 @@
 import ChatIcon from "@mui/icons-material/Chat";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import AuthContext from "../../../providers/auth-conext";
-import { urlToPAgeTile } from "../../../utils/string.util";
 import * as S from "./top-bar.styled";
+import React from "react";
 
-const TopBar = () => {
+interface TopBarProps {
+  username: string;
+  pageTitle: string;
+}
+
+const TopBar = ({ username, pageTitle }: TopBarProps) => {
   const [left, setLeft] = useState(<></>);
   const [right, setRight] = useState(<></>);
   const location = useLocation();
-  const { username } = useContext(AuthContext);
 
   useEffect(() => {
-    setLeft(<>{urlToPAgeTile(location.pathname)}</>);
+    setLeft(<>{pageTitle}</>);
     setRight(
       <>
         <ChatIcon />

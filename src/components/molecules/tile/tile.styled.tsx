@@ -12,9 +12,8 @@ type StyledCardProps = {
   dimension: "1x1" | "1x2" | "2x1";
 } & CardProps;
 
-const StyledCard = styled(Card)<StyledCardProps>(({width, dimension}) => ({
+export const StyledCard = styled(Card)<StyledCardProps>(({width, dimension}) => ({
   width: width,
   height: `calc(${width} * ${dimensions[dimension]})`,
 }));
 
-export default StyledCard;

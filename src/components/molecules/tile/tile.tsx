@@ -2,6 +2,7 @@ import { CardContent, Typography } from "@mui/material";
 import { CSSProperties, ReactNode } from "react";
 
 import * as S from "./tile.styled";
+import React from "react";
 
 type TileProps = {
   title: ReactNode;

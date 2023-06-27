@@ -1,3 +1,7 @@
+## TODO
+
+- Use theme instead of hard-coded css values where possible
+
 # Getting Started 
 
 ## GCP Artifact

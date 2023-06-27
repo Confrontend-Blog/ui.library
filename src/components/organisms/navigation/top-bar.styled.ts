@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 
 type NavigationWrapperProps = {
   linkStyle?: string;
-  theme: Theme;
+  theme?: Theme;
 };
 
 export const NavigationWrapper = styled("span")<NavigationWrapperProps>(

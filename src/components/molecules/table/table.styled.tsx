@@ -8,7 +8,7 @@ export const TableWrapper = styled('table')({
 
 type TableHeaderProps = {
   width?: string | number;
-  theme: Theme;
+  theme?: Theme;
 };
 
 export const TableHeader = styled('th')<TableHeaderProps>(({ theme, width }) => ({
@@ -30,7 +30,7 @@ export const TableCell = styled('td')({
 });
 
 type TableRowProps = {
-  theme: Theme;
+  theme?: Theme;
 };
 
 export const TableRow = styled('tr')<TableRowProps>(({ theme }) => ({

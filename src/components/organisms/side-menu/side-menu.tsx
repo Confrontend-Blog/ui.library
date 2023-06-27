@@ -1,16 +1,17 @@
-import React from "react";
+import React, { ComponentType } from "react";
 import { ButtonBase, ListItem, ListItemIcon } from "@mui/material";
 import { Link } from "react-router-dom";
 
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import { RoutePaths } from "../../../root-component";
-import { useLogout } from "../logout/logout";
-import MenuItems from "./menu-items";
 import * as S from "./side-menu.styled";
 
-function SideMenu() {
-  const logout = useLogout();
+interface SideMenuProps {
+  logoutPath: string;
+  logoutCb?: () => void;
+  MenuItems: ComponentType;
+}
 
+function SideMenu({ logoutPath, logoutCb, MenuItems }: SideMenuProps) {
   return (
     <S.Wrapper>
       <S.LogoWrapper>
@@ -20,8 +21,8 @@ function SideMenu() {
         <MenuItems />
       </S.MenuItemsWrapper>
       <S.MenuFooter>
-        <Link to={RoutePaths.Login}>
-          <ButtonBase onClick={logout}>
+        <Link to={logoutPath}>
+          <ButtonBase onClick={logoutCb}>
             <ListItem>
               <ListItemIcon>
                 <ExitToAppIcon />

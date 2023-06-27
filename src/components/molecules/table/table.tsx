@@ -1,6 +1,7 @@
 import { useTable } from "react-table";
 
 import * as S from "./table.styled";
+import React from "react";
 
 type TableProps<T> = {
   onRowClick?: ((row: T) => void) | undefined;

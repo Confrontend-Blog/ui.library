@@ -5,25 +5,29 @@ import ArticleIcon from "@mui/icons-material/Description";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 import AuthorIcon from "@mui/icons-material/People";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { ListItem, ListItemText } from "@mui/material";
+import { ListItem, ListItemText, SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 
-const createStyledIcon = (IconComponent: OverridableComponent<any>) => {
-  return styled(IconComponent)(({ theme }) => ({
-    color: theme.palette.primary.main,
-  }));
-};
+// export const createStyledIcon = (
+//   IconComponent: OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
+//     muiName: string;
+//   }
+// ) => {
+//   return styled(IconComponent)(({ theme }) => ({
+//     color: theme.palette.primary.main,
+//   }));
+// };
 
-export const StyledDashboardIcon = createStyledIcon(DashboardIcon);
-export const StyledComposerIcon = createStyledIcon(EditNoteIcon);
-export const StyledAuthorIcon = createStyledIcon(AuthorIcon);
-export const StyledArticleIcon = createStyledIcon(ArticleIcon);
-export const StyledChatIcon = createStyledIcon(ChatIcon);
-export const StyledSettingsIcon = createStyledIcon(SettingsIcon);
+// export const StyleIcon = createStyledIcon(DashboardIcon);
+// export const StyledComposerIcon = createStyledIcon(EditNoteIcon);
+// export const StyledAuthorIcon = createStyledIcon(AuthorIcon);
+// export const StyledArticleIcon = createStyledIcon(ArticleIcon);
+// export const StyledChatIcon = createStyledIcon(ChatIcon);
+// export const StyledSettingsIcon = createStyledIcon(SettingsIcon);
 
 export const StyledListItemText = styled(ListItemText)(({ theme }) => ({
   "&.active": {
-    color: theme.palette.error.main, // Change the active color here
+    color: theme.palette.error.main, 
   },
   color: theme.palette.primary.main,
   [theme.breakpoints.down("md")]: {
