@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import * as S from "./scroll-progress-bar.styled";
 
-type ScrollProgressBarProps = {
+export type ScrollProgressBarProps = {
   color?: string;
 };
 
@@ -38,4 +38,4 @@ function ScrollProgressBar({ color = "red" }: ScrollProgressBarProps) {
   );
 }
 
-export default ScrollProgressBar;
+export { ScrollProgressBar };

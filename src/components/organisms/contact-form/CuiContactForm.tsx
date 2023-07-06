@@ -2,7 +2,7 @@ import { FieldErrorsImpl, FormProvider, useForm } from "react-hook-form";
 import { FormControl, InputLabel, MenuItem, TextField } from "@mui/material";
 import { CuiInput } from "./CuiInput";
 import isEmail from "validator/lib/isEmail";
-import { CuiButton } from "../../atoms/button/button";
+import { Button } from "../../atoms/button/button";
 import { CuiTooltip } from "../../atoms/tooltip/cui-tooltip";
 import { ReactNode } from "react";
 import React from "react";
@@ -84,9 +84,9 @@ export const CuiContactForm = ({
         </FormControl>
         <CuiTooltip title={getTooltipText(form.formState.errors)}>
           <FormControl fullWidth>
-            <CuiButton type="submit" disabled={!form.formState.isValid}>
+            <Button type="submit" disabled={!form.formState.isValid}>
               Send
-            </CuiButton>
+            </Button>
           </FormControl>
         </CuiTooltip>
       </form>

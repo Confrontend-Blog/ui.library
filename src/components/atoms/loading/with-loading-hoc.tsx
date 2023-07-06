@@ -14,7 +14,7 @@ type WithLoadingProps = {
  * @param {(props: P) => JSX.Element} Component - The component to wrap.
  * @returns {((props: P & WithLoadingProps) => JSX.Element)} - A new component that accepts the same props as the wrapped component and an additional `isLoading` prop.
  */
-const withLoading = <P extends object>(
+const WithLoading = <P extends object>(
   Component: (props: P) => JSX.Element
 ): ((props: P & WithLoadingProps) => JSX.Element) => {
   return function WithLoadingComponent({
@@ -29,4 +29,4 @@ const withLoading = <P extends object>(
   };
 };
 
-export default withLoading;
+export default WithLoading;

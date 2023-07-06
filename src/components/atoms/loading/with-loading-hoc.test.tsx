@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import withLoading from "./with-loading-hoc";
+import WithLoading from "./with-loading-hoc";
 import React from "react";
 
 const TestComponent = ({ text }: { text: string }) => <div>{text}</div>;
-const TestComponentWithLoading = withLoading(TestComponent);
+const TestComponentWithLoading = WithLoading(TestComponent);
 
 describe("withLoading HOC", () => {
   it("renders the loading component when isLoading is true", () => {
