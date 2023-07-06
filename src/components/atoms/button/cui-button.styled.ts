@@ -1,39 +1,41 @@
-import { Theme } from '@mui/material/styles';
-import { styled } from "@mui/system";
+import { Theme } from "@mui/material/styles";
 
 import { Button, ButtonProps } from "@mui/material";
+import { styled } from "../../../utils/styled";
 
 type CustomButtonProps = {
   textColor?: string;
   bgColor?: string;
   hoverBgColor?: string;
   hoverColor?: string;
-  theme?: Theme // TODO find a way to make this implicit
 } & ButtonProps;
 
-export const ButtonWrapper = styled(Button)<CustomButtonProps>(
-  ({ theme, textColor, bgColor, hoverBgColor, hoverColor }) => ({
-    boxShadow: theme.shadows[1],
-    border: '1px solid',
-    borderRadius: '0.75em',
-    display: 'inline-block',
-    cursor: 'pointer',
-    color: textColor || '#000',
-    backgroundColor: bgColor,
-    fontSize: '15px',
-    fontWeight: 'bold',
-    padding: '6px 24px',
-    textDecoration: 'none',
-    '&:hover': {
-      backgroundColor: hoverBgColor || '#eee',
-      color: hoverColor || '#000',
-    },
-    '&:disabled': {
-      color: 'rgba(151, 151, 151, 1)',
-      cursor: 'not-allowed',
-      boxShadow: 'none',
-      backgroundColor: '#222',
-      pointerEvents: 'none',
-    },
-  })
-);
+const shouldForwardProp = (prop: any) =>
+  !["textColor", "bgColor", "hoverBgColor", "hoverColor"].includes(prop);
+
+export const ButtonWrapper = styled(Button, {
+  shouldForwardProp,
+})<CustomButtonProps>`
+  box-shadow: ${({ theme }) => theme.shadows![2]};
+  border: 1px solid;
+  border-radius: 0.75em;
+  display: inline-block;
+  cursor: pointer;
+  color: ${({ textColor }) => textColor || "#000"};
+  background-color: ${({ bgColor }) => bgColor || "#000"};
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  &:hover {
+    background-color: ${({ hoverBgColor }) => hoverBgColor || "#eee"};
+    color: ${({ hoverColor }) => hoverColor || "#000"};
+  }
+  &:disabled {
+    color: rgba(151, 151, 151, 1);
+    cursor: not-allowed;
+    box-shadow: none;
+    background-color: #222;
+    pointer-events: none;
+  }
+`;

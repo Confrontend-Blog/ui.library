@@ -24,6 +24,7 @@ const CuiButton = ({
   hoverBgColor,
   disabled,
   type = undefined,
+  ...restProps
 }: CuiButtonProps) => {
   return (
     <S.ButtonWrapper
@@ -34,6 +35,7 @@ const CuiButton = ({
       hoverBgColor={hoverBgColor}
       disabled={disabled}
       type={type}
+      {...restProps}
     >
       {children}
     </S.ButtonWrapper>
