@@ -3,7 +3,7 @@ import { FormControl, InputLabel, MenuItem, TextField } from "@mui/material";
 import { CuiInput } from "./CuiInput";
 import isEmail from "validator/lib/isEmail";
 import { Button } from "../../atoms/button/button";
-import { CuiTooltip } from "../../atoms/tooltip/cui-tooltip";
+import { Tooltip } from "../../atoms/tooltip/tooltip";
 import { ReactNode } from "react";
 import React from "react";
 
@@ -82,13 +82,13 @@ export const CuiContactForm = ({
             }}
           />
         </FormControl>
-        <CuiTooltip title={getTooltipText(form.formState.errors)}>
+        <Tooltip title={getTooltipText(form.formState.errors)}>
           <FormControl fullWidth>
             <Button type="submit" disabled={!form.formState.isValid}>
               Send
             </Button>
           </FormControl>
-        </CuiTooltip>
+        </Tooltip>
       </form>
     </FormProvider>
   );

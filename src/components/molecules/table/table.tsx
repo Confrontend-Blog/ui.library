@@ -3,7 +3,7 @@ import { useTable } from "react-table";
 import * as S from "./table.styled";
 import React from "react";
 
-type TableProps<T> = {
+export type TableProps<T> = {
   onRowClick?: ((row: T) => void) | undefined;
   data: T[];
   columns: any;
@@ -62,4 +62,4 @@ function Table<T extends object>({
     </S.TableWrapper>
   );
 }
-export default Table;
+export { Table };

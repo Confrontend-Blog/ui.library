@@ -32,7 +32,9 @@ const templateProps: ScrollProgressBarProps = {
 export const Default: Story = (args) => (
   <>
     <ScrollProgressBar {...args} />
-    <ScrollableContent>Scroll Down ⬇️</ScrollableContent>
+    <ScrollableContent>
+      Scroll down to see the progress bar ⬇️
+    </ScrollableContent>
   </>
 );
 
