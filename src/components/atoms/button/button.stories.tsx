@@ -1,16 +1,16 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { CuiButton, CuiButtonProps } from "./cui-button";
+import { Button, ButtonProps } from "./button";
 
-const meta: Meta<typeof CuiButton> = {
-  title: "CuiButton",
-  component: CuiButton,
+const meta: Meta<typeof Button> = {
+  title: "Button",
+  component: Button,
 };
 
 export default meta;
-type Story = StoryObj<typeof CuiButton>;
+type Story = StoryObj<typeof Button>;
 
-const templateProps: CuiButtonProps = {
+const templateProps: ButtonProps = {
   children: "Template Button",
   color: "#fff",
   bgColor: "#000",

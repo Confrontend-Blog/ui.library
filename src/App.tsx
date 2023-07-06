@@ -1,4 +1,3 @@
-
 import "./App.css";
 import { CuiContactForm } from "./components/organisms/contact-form/CuiContactForm";
 import { lightTheme } from "./theme/theme";
@@ -8,11 +7,9 @@ import BarChart from "./components/organisms/charts/bar-chart";
 import { barChartData, listItems, options } from "../data/fake-data";
 import ScrollProgressBar from "./components/atoms/scroll-progress-bar/scroll-progress-bar";
 import React from "react";
-import { CuiButton } from "./components/atoms/button/cui-button";
+import { CuiButton } from "./components/atoms/button/button";
 import { SignInForm } from "./components/organisms/signin-form/signin-form";
 import { ThemeProvider, Typography } from "@mui/material";
-
-
 
 function App() {
   const [count, setCount] = useState(0);
