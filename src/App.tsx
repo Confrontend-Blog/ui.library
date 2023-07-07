@@ -5,9 +5,9 @@ import { FormEvent, useState } from "react";
 import FilteredList from "./components/molecules/filtered-list/filtered-list";
 import BarChart from "./components/organisms/charts/bar-chart";
 import { barChartData, listItems, options } from "../data/fake-data";
-import ScrollProgressBar from "./components/atoms/scroll-progress-bar/scroll-progress-bar";
+import { ScrollProgressBar } from "./components/atoms/scroll-progress-bar/scroll-progress-bar";
 import React from "react";
-import { CuiButton } from "./components/atoms/button/button";
+import { Button } from "./components/atoms/button/button";
 import { SignInForm } from "./components/organisms/signin-form/signin-form";
 import { ThemeProvider, Typography } from "@mui/material";
 
@@ -49,7 +49,7 @@ function App() {
             throw new Error("Function not implemented.");
           }}
         ></SignInForm>
-        <CuiButton>Cui Button</CuiButton>
+        <Button>Cui Button</Button>
         <CuiContactForm
           userName={{
             label: "Name",

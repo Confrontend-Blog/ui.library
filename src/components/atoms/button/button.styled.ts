@@ -1,5 +1,3 @@
-import { Theme } from "@mui/material/styles";
-
 import { Button, ButtonProps } from "@mui/material";
 import { styled } from "../../../utils/styled";
 
@@ -10,9 +8,6 @@ type CustomButtonProps = {
   hoverColor?: string;
 } & ButtonProps;
 
-const shouldForwardProp = (prop: any) =>
-  !["textColor", "bgColor", "hoverBgColor", "hoverColor"].includes(prop);
-
 export const ButtonWrapper = styled(Button)<CustomButtonProps>(
   ({ theme, textColor, bgColor, hoverBgColor, hoverColor }) => ({
     boxShadow: theme.shadows![1],
@@ -21,13 +16,13 @@ export const ButtonWrapper = styled(Button)<CustomButtonProps>(
     display: "inline-block",
     cursor: "pointer",
     color: textColor || "#000",
-    backgroundColor: bgColor,
+    backgroundColor: theme.palette?.primary?.main || bgColor,
     fontSize: "15px",
     fontWeight: "bold",
     padding: "6px 24px",
     textDecoration: "none",
     "&:hover": {
-      backgroundColor: hoverBgColor || "#eee",
+      backgroundColor: theme.palette?.secondary?.main || hoverBgColor,
       color: hoverColor || "#000",
     },
     "&:disabled": {

@@ -23,7 +23,7 @@ const shadows = {
   elevationHigh: "0 16px 32px 0 rgba(0, 0, 0, 0.12)",
 };
 
-const appTheme: ThemeOptions = {
+const appTheme = {
   palette: {
     action: {
       active: colors.grey[900],
@@ -33,7 +33,7 @@ const appTheme: ThemeOptions = {
       selected: colors.grey[900],
     },
     background: {
-      default: colors.grey[900],
+      default: colors.grey[200],
       paper: colors.white,
     },
     divider: colors.grey[600],
@@ -95,30 +95,11 @@ const appTheme: ThemeOptions = {
     shadows.elevationLow,
     shadows.elevationMid,
     shadows.elevationHigh,
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-  ],
+  ] as any,
 };
 
 export const lightTheme = createTheme(appTheme);
 
-export type AppTheme = typeof appTheme;
+console.log(lightTheme);
+
+export type AppTheme = typeof lightTheme;
