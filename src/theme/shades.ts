@@ -11,8 +11,8 @@ export const shades = {
     /** #fafafa */
     25: "#fafafa",
 
-    /** #eeeeee*/
-    200: "#eeeeee",
+    /** #F2F2F2*/
+    200: "#F2F2F2",
 
     /** #757575*/
     600: "#757575",

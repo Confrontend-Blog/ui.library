@@ -3,6 +3,7 @@
 - Use hygen for component generation
 - Use theme instead of hard-coded css values where possible
 - Remove unwanted files and folders from lib, such as `data/fake-data.ts`
+- Pipeline for publish on main push
 
 # Getting Started
 
