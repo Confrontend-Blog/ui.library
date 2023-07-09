@@ -19,8 +19,8 @@ declare module "@mui/material/styles" {
 
 const shadows = {
   elevationLow: "0 2px 8px 0 rgba(0, 0, 0, 0.08)",
-  elevationMid: "0 4px 20px 0 rgba(0, 0, 0, 0.12)",
-  elevationHigh: "0 16px 32px 0 rgba(0, 0, 0, 0.12)",
+  elevationMid: "0 4px 20px 0 rgba(0, 0, 0, 0.25)",
+  elevationHigh: "0 16px 32px 0 rgba(0, 0, 0, 0.25)",
 };
 
 const appTheme = {

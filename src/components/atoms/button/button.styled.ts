@@ -10,26 +10,24 @@ type CustomButtonProps = {
 
 export const ButtonWrapper = styled(Button)<CustomButtonProps>(
   ({ theme, textColor, bgColor, hoverBgColor, hoverColor }) => ({
-    boxShadow: theme.shadows![1],
-    border: "1px solid",
     borderRadius: "0.75em",
     display: "inline-block",
     cursor: "pointer",
-    color: textColor || "#000",
-    backgroundColor: theme.palette?.primary?.main || bgColor,
+    color: textColor || theme.palette.background.paper,
+    backgroundColor: bgColor || theme.palette?.info?.main,
     fontSize: "15px",
     fontWeight: "bold",
     padding: "6px 24px",
     textDecoration: "none",
     "&:hover": {
-      backgroundColor: theme.palette?.secondary?.main || hoverBgColor,
-      color: hoverColor || "#000",
+      boxShadow: theme.shadows![2],
+      backgroundColor: hoverBgColor || theme.palette?.secondary?.main,
+      color: hoverColor || theme.palette.background.paper,
     },
     "&:disabled": {
-      color: "rgba(151, 151, 151, 1)",
+      color: textColor || theme.palette.background.paper,
       cursor: "not-allowed",
-      boxShadow: "none",
-      backgroundColor: "#222",
+      backgroundColor: bgColor || theme.palette?.action?.disabled,
       pointerEvents: "none",
     },
   })

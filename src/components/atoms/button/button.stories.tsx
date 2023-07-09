@@ -12,10 +12,6 @@ type Story = StoryObj<typeof Button>;
 
 const templateProps: ButtonProps = {
   children: "Template Button",
-  color: "#fff",
-  bgColor: "#000",
-  hoverColor: "#000",
-  hoverBgColor: "#eee",
   disabled: false,
   type: "button",
   onClick: (e) => console.log("clicked", e),
