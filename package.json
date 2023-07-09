@@ -1,13 +1,13 @@
 {
   "name": "@Confrontend/ui-library",
-  "version": "1.10.0",
-  "main": "./lib/index.es.js",
-  "types": "./lib/src/index.d.ts",
+  "version": "1.11.0",
+  "main": "lib/index.es.js",
+  "types": "lib/src/index.d.ts",
   "scripts": {
     "start": "vite src/",
     "build": "rm -rf lib/* && concurrently \"yarn:build:*\"",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:lib": "yarn build:types && vite --config ./vite.config.ts build src/",
+    "build:lib": "vite --config ./vite.config.ts build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
