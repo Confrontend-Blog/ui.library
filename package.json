@@ -1,9 +1,8 @@
 {
   "name": "@Confrontend/ui-library",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "main": "./lib/index.es.js",
-  "module": "./lib/index.es.js",
-  "types": "./lib/index.d.ts",
+  "types": "./lib/src/index.d.ts",
   "scripts": {
     "start": "vite src/",
     "build": "rm -rf lib/* && concurrently \"yarn:build:*\"",
