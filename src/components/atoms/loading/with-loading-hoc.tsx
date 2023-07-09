@@ -1,5 +1,5 @@
 import React from "react";
-import Loading from "./loading";
+import { Loading } from "./loading";
 
 type WithLoadingProps = {
   isLoading: boolean;
@@ -29,4 +29,4 @@ const WithLoading = <P extends object>(
   };
 };
 
-export default WithLoading;
+export { WithLoading };

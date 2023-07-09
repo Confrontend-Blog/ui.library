@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import WithLoading from "./with-loading-hoc";
+import { WithLoading } from "./with-loading-hoc";
 import React from "react";
 
 const TestComponent = ({ text }: { text: string }) => <div>{text}</div>;

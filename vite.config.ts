@@ -10,7 +10,7 @@ export default defineConfig({
   build: {
     minify: false,
     emptyOutDir: false,
-    outDir: "../lib",
+    outDir: "lib",
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
       fileName: (format) => `index.${format}.js`,
@@ -34,7 +34,7 @@ export default defineConfig({
     port: 3000,
     strictPort: true,
   },
-  publicDir: '../public',
+  publicDir: "../public",
   plugins: [
     react(),
     svgr(),

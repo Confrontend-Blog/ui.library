@@ -19,7 +19,7 @@ const Tile = ({
   content,
   width = "100%",
   dimension = "1x1",
-  style
+  style,
 }: TileProps) => {
   return (
     <S.StyledCard style={style} width={width} dimension={dimension}>
@@ -32,4 +32,4 @@ const Tile = ({
   );
 };
 
-export default Tile;
+export { Tile };
