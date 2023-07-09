@@ -1,6 +1,6 @@
 {
   "name": "@Confrontend/ui-library",
-  "version": "1.13.0",
+  "version": "1.14.0",
   "main": "lib/index.es.js",
   "types": "lib/src/index.d.ts",
   "scripts": {
@@ -81,6 +81,7 @@
     "@mui/material": "^5.4.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-hook-form": "^7.42.1",
     "styled-components": "^5.3.6",
     "validator": "^13.7.0"
   },
@@ -97,6 +98,8 @@
     ]
   },
   "dependencies": {
+    "chart.js": "^4.3.0",
+    "react-chartjs-2": "^5.2.0",
     "react-table": "^7.8.0"
   },
   "publishConfig": {
