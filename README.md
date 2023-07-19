@@ -5,7 +5,17 @@
 - Remove unwanted files and folders from lib, such as `data/fake-data.ts`
 - Pipeline for publish on main push
 
-# Getting Started
+## Introduction
+
+A UI component library for React, custom-tailored for Confrontend Blog. Built atop the white-label Material-UI, it effortlessly blends the power of MUI with the distinctive style of our blog.
+
+## Why having a Pattern/Component/UI Library:
+
+- Design and Dev create and maintain a Pattern Lib
+- The Pattern Lib is the main point of transfer
+- UI-Code is also developed and tested here
+- Components can be shown to all stakeholders
+- They form a shared language for the entire team
 
 #### GCP Artifact
 

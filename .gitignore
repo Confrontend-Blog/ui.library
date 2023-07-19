@@ -21,3 +21,4 @@ sketch
 dist
 lib
 .npmrc
+stats.html
