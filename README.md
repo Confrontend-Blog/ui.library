@@ -1,9 +1,6 @@
-## TODO
+# UI Library
 
-- Use hygen for component generation
-- Use theme instead of hard-coded css values where possible
-- Remove unwanted files and folders from lib, such as `data/fake-data.ts`
-- Pipeline for publish on main push
+UI Library is a comprehensive set of UI components built with React, TypeScript, and styled-components. This library utilizes Storybook, a powerful tool for developing and showcasing components. The project is organized according to the principles of Atomic Design, providing a scalable and understandable structure. It is published as an npm package on this Github account registry.
 
 ## Introduction
 
@@ -50,3 +47,10 @@ https://medium.com/rockedscience/host-private-node-js-packages-on-the-google-clo
 ```
 
 - Finally run `yarn publish`
+
+## TODO
+
+- Use hygen for component generation
+- Use theme instead of hard-coded css values where possible
+- Remove unwanted files and folders from lib, such as `data/fake-data.ts`
+- Pipeline for publish on main push
