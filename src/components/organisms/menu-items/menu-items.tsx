@@ -10,7 +10,7 @@ interface MenuItem {
   text: string;
 }
 
-interface MenuItemsProps {
+export interface MenuItemsProps {
   items: MenuItem[];
 }
 

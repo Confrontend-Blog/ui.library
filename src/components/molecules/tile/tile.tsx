@@ -17,7 +17,7 @@ type TileProps = {
 const Tile = ({
   title,
   content,
-  width = "100%",
+  width = "500px",
   dimension = "1x1",
   style,
 }: TileProps) => {
@@ -25,7 +25,6 @@ const Tile = ({
     <S.StyledCard style={style} width={width} dimension={dimension}>
       <CardContent>
         {title}
-
         {content}
       </CardContent>
     </S.StyledCard>

@@ -35,4 +35,4 @@ const TopBar = ({ username, pageTitle }: TopBarProps) => {
   );
 };
 
-export default TopBar;
+export { TopBar };

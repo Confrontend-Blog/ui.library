@@ -1,10 +1,10 @@
-import { Card, CardProps } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { Card, CardProps } from "@mui/material";
+import { styled } from "@mui/material/styles";
 
 const dimensions = {
-  '1x1': 1,
-  '1x2': 2,
-  '2x1': 0.5,
+  "1x1": 1,
+  "1x2": 2,
+  "2x1": 0.5,
 };
 
 type StyledCardProps = {
@@ -12,8 +12,9 @@ type StyledCardProps = {
   dimension: "1x1" | "1x2" | "2x1";
 } & CardProps;
 
-export const StyledCard = styled(Card)<StyledCardProps>(({width, dimension}) => ({
-  width: width,
-  height: `calc(${width} * ${dimensions[dimension]})`,
-}));
-
+export const StyledCard = styled(Card)<StyledCardProps>(
+  ({ width, dimension }) => ({
+    width: width,
+    height: `calc(${width} * ${dimensions[dimension]})`,
+  })
+);

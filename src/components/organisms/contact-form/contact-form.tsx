@@ -1,6 +1,6 @@
 import { FieldErrorsImpl, FormProvider, useForm } from "react-hook-form";
 import { FormControl, InputLabel, MenuItem, TextField } from "@mui/material";
-import { CuiInput } from "./CuiInput";
+import { FormInput } from "../../molecules/form-input/form-input";
 import isEmail from "validator/lib/isEmail";
 import { Button } from "../../atoms/button/button";
 import { Tooltip } from "../../atoms/tooltip/tooltip";
@@ -13,23 +13,23 @@ interface FormState {
   msg: string;
 }
 
-type CuiInputType = {
+type InputType = {
   label: string;
   name: string;
   defaultValue: string;
 };
 
-interface CuiContactFormProps {
-  userName: CuiInputType;
-  email: CuiInputType;
-  message: CuiInputType;
+interface ContactFormProps {
+  userName: InputType;
+  email: InputType;
+  message: InputType;
 }
 
-export const CuiContactForm = ({
+export const ContactForm = ({
   userName,
   email,
   message,
-}: CuiContactFormProps): JSX.Element => {
+}: ContactFormProps): JSX.Element => {
   const form = useForm<FormState>({ mode: "onTouched" });
 
   const onSubmit = () => {
@@ -48,12 +48,12 @@ export const CuiContactForm = ({
     <FormProvider {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <FormControl fullWidth>
-          <CuiInput<FormState, "userName">
+          <FormInput<FormState, "userName">
             label={userName.label}
             name={"userName"}
             defaultValue={userName.defaultValue}
           />
-          <CuiInput<FormState, "email">
+          <FormInput<FormState, "email">
             label={email.label}
             rules={{
               validate: (value: string) =>
@@ -65,7 +65,7 @@ export const CuiContactForm = ({
             name={"email"}
             required={true}
           />
-          <CuiInput
+          <FormInput
             label={message.label}
             variant="outlined"
             sx={{ marginBlockEnd: "1em" }}

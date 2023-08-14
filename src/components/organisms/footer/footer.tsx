@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <S.FooterWrapper>
       <S.FooterNav>
-        &copy; {new Date().getFullYear()} Hamed Fatehi. All Rights Reserved.
+        &copy; {new Date().getFullYear()} All Rights Reserved.
       </S.FooterNav>
     </S.FooterWrapper>
   );

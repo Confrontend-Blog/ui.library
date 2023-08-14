@@ -1,7 +1,4 @@
-import TextField, {
-  OutlinedTextFieldProps,
-  TextFieldProps,
-} from "@mui/material/TextField";
+import TextField from "@mui/material/TextField";
 import {
   Controller,
   FieldPath,
@@ -12,7 +9,7 @@ import {
 } from "react-hook-form";
 import React from "react";
 
-interface CuiInputProps<
+interface InputProps<
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > extends FieldValues {
@@ -26,7 +23,7 @@ interface CuiInputProps<
   };
 }
 
-export const CuiInput = <
+export const FormInput = <
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >({
@@ -36,7 +33,7 @@ export const CuiInput = <
   transform,
   defaultValue = "" as FieldPathValue<TFieldValues, TName>,
   ...rest
-}: CuiInputProps<TFieldValues, TName>) => {
+}: InputProps<TFieldValues, TName>) => {
   const formContext = useFormContext<TFieldValues>();
 
   return (

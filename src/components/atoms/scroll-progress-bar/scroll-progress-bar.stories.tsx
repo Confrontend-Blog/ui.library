@@ -18,7 +18,7 @@ const ScrollableContent = styled("div")`
 `;
 
 const meta: Meta<typeof ScrollProgressBar> = {
-  title: "ScrollProgressBar",
+  title: "Atoms/ScrollProgressBar",
   component: ScrollProgressBar,
 };
 

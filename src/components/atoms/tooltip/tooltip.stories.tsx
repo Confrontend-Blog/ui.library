@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Tooltip } from "./tooltip";
 
 const meta: Meta<typeof Tooltip> = {
-  title: "Tooltip",
+  title: "Atoms/Tooltip",
   component: Tooltip,
 };
 

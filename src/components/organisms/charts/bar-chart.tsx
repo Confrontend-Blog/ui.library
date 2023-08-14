@@ -1,4 +1,4 @@
-import { memo, useEffect, useRef } from "react";
+import { memo } from "react";
 import { Bar } from "react-chartjs-2";
 
 import { Chart, LinearScale, CategoryScale, BarElement } from "chart.js";
@@ -16,14 +16,14 @@ type ChartData = {
   }>;
 };
 
-type ChartProps = {
+export type ChartProps = {
   data: ChartData;
   options?: object;
 };
 
 const BarChart = ({ data, options }: ChartProps) => {
-    console.log('render');
-    
+  console.log("render");
+
   return (
     <>
       <div className="header">

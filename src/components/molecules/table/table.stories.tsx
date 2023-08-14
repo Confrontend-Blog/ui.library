@@ -40,7 +40,7 @@ const templateProps: TableProps<any> = {
 };
 
 const meta: Meta<typeof Table> = {
-  title: "Table",
+  title: "Molecules/Table",
   component: Table,
 };
 export default meta;

@@ -1,5 +1,5 @@
 import "./App.css";
-import { CuiContactForm } from "./components/organisms/contact-form/CuiContactForm";
+import { CuiContactForm } from "./components/organisms/contact-form/contact-form";
 import { lightTheme } from "./theme/theme";
 import { FormEvent, useState } from "react";
 import FilteredList from "./components/molecules/filtered-list/filtered-list";
@@ -10,6 +10,7 @@ import React from "react";
 import { Button } from "./components/atoms/button/button";
 import { SignInForm } from "./components/organisms/signin-form/signin-form";
 import { ThemeProvider, Typography } from "@mui/material";
+import { Tile } from "./components/molecules/tile/tile";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,6 +18,16 @@ function App() {
   return (
     <ThemeProvider theme={lightTheme}>
       <div className="App">
+        <Tile
+          title={"Top Article Today"}
+          content={
+            <div>
+              <h1>Comparing Linaria and Styled-Components</h1>
+              <h5>Total view: 10.3k</h5>
+              <h5>Online since: 15.04.2023</h5>
+            </div>
+          }
+        />
         <div>
           <Typography variant="h1">This is an h1 heading</Typography>
           <Typography variant="h2">This is an h2 heading</Typography>

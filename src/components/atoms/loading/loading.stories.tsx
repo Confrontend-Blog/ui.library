@@ -1,10 +1,10 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import Loading from "./loading";
+import { Loading } from "./loading";
 import { styled } from "../../../utils/styled";
 
 const meta: Meta<typeof Loading> = {
-  title: "Loading",
+  title: "Atoms/Loading",
   component: Loading,
 };
 
