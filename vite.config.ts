@@ -15,7 +15,16 @@ export default defineConfig({
       entry: path.resolve(__dirname, "src/index.ts"),
       fileName: (format) => `index.${format}.js`,
       name: "ui-library",
-      formats: ["es"],
+      /**
+        Developer Insight:
+        Using ES module format can cause overhead in tools like Jest, 
+        which skips `node_modules` compilation by default. 
+        This might lead to syntax errors during testing, 
+        requiring adjustments like `transformIgnorePatterns`. 
+        Providing both CommonJS (cjs) and ES module (es) builds 
+        ensures broader compatibility and reduces setup complexities.
+      */
+      formats: ["cjs", "es"],
     },
     rollupOptions: {
       external: ["@emotion/react", "@emotion/styled", /react.*/, /@mui\/.*/],

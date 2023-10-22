@@ -1,5 +1,5 @@
 import "./App.css";
-import { CuiContactForm } from "./components/organisms/contact-form/contact-form";
+import { ContactForm } from "./components/organisms/contact-form/contact-form";
 import { lightTheme } from "./theme/theme";
 import { FormEvent, useState } from "react";
 import FilteredList from "./components/molecules/filtered-list/filtered-list";
@@ -61,7 +61,7 @@ function App() {
           }}
         ></SignInForm>
         <Button>Cui Button</Button>
-        <CuiContactForm
+        <ContactForm
           userName={{
             label: "Name",
             name: "fff",
