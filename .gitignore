@@ -22,3 +22,4 @@ dist
 lib
 .npmrc
 stats.html
+project-as-text.txt
