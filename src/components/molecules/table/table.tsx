@@ -3,10 +3,17 @@ import { useTable } from "react-table";
 import * as S from "./table.styled";
 import React from "react";
 
+export type TableColumn<T> = {
+  Header: string;
+  accessor: keyof T;
+  width?: string;
+  Cell?: ({ row }: any) => any;
+};
+
 export type TableProps<T> = {
   onRowClick?: ((row: T) => void) | undefined;
   data: T[];
-  columns: any;
+  columns: TableColumn<T>[];
   hiddenColumns?: string[];
 };
 
