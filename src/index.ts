@@ -11,3 +11,7 @@ export * from "./components/organisms/contact-form/contact-form";
 export * from "./components/organisms/non-ideal-state/non-ideal-state";
 export { SignInForm as SignIn } from "./components/organisms/signin-form/signin-form";
 export * from "./components/organisms/charts/bar-chart";
+
+export * from "./theme/shades";
+export * from "./theme/theme";
+export * from "./theme/typography";

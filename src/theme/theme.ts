@@ -100,6 +100,4 @@ const appTheme = {
 
 export const lightTheme = createTheme(appTheme);
 
-console.log(lightTheme);
-
 export type AppTheme = typeof lightTheme;
